@@ -1,0 +1,8 @@
+{
+  "name": "Testing",
+  "paths": [
+    "src/component"
+  ],
+  "local": [],
+  "dependencies": {}
+}
