@@ -14,12 +14,12 @@ if typeof Object.create isnt 'function'
 MW = {}
 
 
-stooge =
+MW.stooge =
   firstName: "Jerome"
   lastName: 'Howard'
 
 
-flight =
+MW.flight =
   airline: 'Oceanic'
   number: 815
   departure:
@@ -32,23 +32,23 @@ flight =
     city: 'Los Angeles'
 
 
-flight.equipment =
+MW.flight.equipment =
   model: 'Boeing 777'
-flight.status = 'overdue'
+MW.flight.status = 'overdue'
 
-console.log flight
-stooge.nickname = 'Curly'
-another_stooge = Object.create stooge
-another_stooge.firstName = "Harry"
-another_stooge.middleName = "Moses"
-another_stooge.nickname = 'Moe'
-stooge.profession = 'actor'
-console.log another_stooge
+console.log MW.flight
+MW.stooge.nickname = 'Curly'
+MW.another_stooge = Object.create MW.stooge
+MW.another_stooge.firstName = "Harry"
+MW.another_stooge.middleName = "Moses"
+MW.another_stooge.nickname = 'Moe'
+MW.stooge.profession = 'actor'
+console.log MW.another_stooge
 
-console.log flight.hasOwnProperty 'number'
+console.log MW.flight.hasOwnProperty 'number'
 
-for key, value of another_stooge
+for key, value of MW.another_stooge
   console.log "#{key}: #{value}"
 
-delete another_stooge.nickname
-console.log another_stooge.nickname
+delete MW.another_stooge.nickname
+console.log MW.another_stooge.nickname

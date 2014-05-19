@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "ch4-functions.js",
+  "sourceRoot": "",
+  "sources": [
+    "ch4-functions.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,YAAA,CAAA;AAAA,IAAA,GAAA;;AAAA,GAEA,GAAM,SAAC,CAAD,EAAI,CAAJ,GAAA;SACJ,CAAA,GAAI,EADA;AAAA,CAFN,CAAA"
+}

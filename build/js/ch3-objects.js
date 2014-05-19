@@ -1,5 +1,5 @@
 'use strict';
-var MW, another_stooge, flight, key, stooge, value;
+var MW, key, value, _ref;
 
 Function.prototype.method = function(name, func) {
   this.prototype[name] = func;
@@ -17,12 +17,12 @@ if (typeof Object.create !== 'function') {
 
 MW = {};
 
-stooge = {
+MW.stooge = {
   firstName: "Jerome",
   lastName: 'Howard'
 };
 
-flight = {
+MW.flight = {
   airline: 'Oceanic',
   number: 815,
   departure: {
@@ -37,38 +37,39 @@ flight = {
   }
 };
 
-flight.equipment = {
+MW.flight.equipment = {
   model: 'Boeing 777'
 };
 
-flight.status = 'overdue';
+MW.flight.status = 'overdue';
 
-console.log(flight);
+console.log(MW.flight);
 
-stooge.nickname = 'Curly';
+MW.stooge.nickname = 'Curly';
 
-another_stooge = Object.create(stooge);
+MW.another_stooge = Object.create(MW.stooge);
 
-another_stooge.firstName = "Harry";
+MW.another_stooge.firstName = "Harry";
 
-another_stooge.middleName = "Moses";
+MW.another_stooge.middleName = "Moses";
 
-another_stooge.nickname = 'Moe';
+MW.another_stooge.nickname = 'Moe';
 
-stooge.profession = 'actor';
+MW.stooge.profession = 'actor';
 
-console.log(another_stooge);
+console.log(MW.another_stooge);
 
-console.log(flight.hasOwnProperty('number'));
+console.log(MW.flight.hasOwnProperty('number'));
 
-for (key in another_stooge) {
-  value = another_stooge[key];
+_ref = MW.another_stooge;
+for (key in _ref) {
+  value = _ref[key];
   console.log("" + key + ": " + value);
 }
 
-delete another_stooge.nickname;
+delete MW.another_stooge.nickname;
 
-console.log(another_stooge.nickname);
+console.log(MW.another_stooge.nickname);
 
 /*
 //# sourceMappingURL=ch3-objects.js.map
