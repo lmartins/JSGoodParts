@@ -1,8 +1,11 @@
 {
-  "name": "Testing",
+  "name": "Playground",
   "paths": [
     "src/component"
   ],
   "local": [],
-  "dependencies": {}
+  "dependencies": {
+    "component/dom": "*",
+    "yyx990803/vue": "*"
+  }
 }
