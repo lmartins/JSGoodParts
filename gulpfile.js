@@ -121,10 +121,11 @@ gulp.task("webpack:build-dev", function() {
 //   gulp.src( options.JS.build )
 //     .pipe(connect.reload());
 // });
-gulp.task('js', function () {
+gulp.task('buildJS', function () {
   gulp.src( options.JS.src )
-    .pipe(uglify())
-    .pipe(gulp.dest( options.JS.build ))
+    // .pipe(uglify())
+    // .pipe(gulp.dest( options.JS.build ))
+    // .pipe(changed( options.JS.src ))
     .pipe(connect.reload());
 });
 
@@ -191,7 +192,7 @@ gulp.task('watch', function () {
   gulp.watch( options.HTML.src , ['html']);
   gulp.watch( options.COFFEE.src , ['coffee']);
   // gulp.watch( options.JS.src , ["webpack:build-dev"]);
-  gulp.watch( options.JS.src , ["js"]);
+  gulp.watch( options.JS.src , ["buildJS"]);
   gulp.watch( [options.COMPONENT.manifest, options.COMPONENT.src] , ['component-js', 'component-css']);
   // gulp.watch(options.IMAGE_SOURCE, ['images']);
   gulp.watch( options.HTML.src , ['html']  );
