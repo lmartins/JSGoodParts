@@ -10,6 +10,7 @@ var gulp            = require('gulp'),
     componentcoffee = require('component-coffee'),
     webpack         = require('webpack'),
     webpackConfig   = require("./webpack.config.js"),
+    include         = require('gulp-include'),
     plumber         = require('gulp-plumber'),
     changed         = require('gulp-changed'),
     uglify          = require('gulp-uglify'),
@@ -126,6 +127,7 @@ gulp.task('buildJS', function () {
     // .pipe(uglify())
     // .pipe(gulp.dest( options.JS.build ))
     // .pipe(changed( options.JS.src ))
+    .pipe( include() )
     .pipe(connect.reload());
 });
 
